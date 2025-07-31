@@ -12,6 +12,20 @@
     <PackageReference Include="Sitecore.Framework.Messaging.Configuration" Version="4.0.1" />
     <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
     <PackageReference Include="Sitecore.Services.Infrastructure" Version="9.3.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.7" />    
+	  <Content Include="App_Config\**\*.*">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
   </ItemGroup>
+	<Target Name="MoveDllsToBin" AfterTargets="Publish">
+		<MakeDir Directories="$(PublishDir)bin" />
+		<ItemGroup>
+			<PublishedDlls Include="$(PublishDir)*.dll" />
+			<PublishedPdbs Include="$(PublishDir)*.pdb" />
+		</ItemGroup>
+		<Move SourceFiles="@(PublishedDlls)" DestinationFolder="$(PublishDir)bin\" />
+		<Move SourceFiles="@(PublishedPdbs)" DestinationFolder="$(PublishDir)bin\" />
+	</Target>
 
 </Project>
