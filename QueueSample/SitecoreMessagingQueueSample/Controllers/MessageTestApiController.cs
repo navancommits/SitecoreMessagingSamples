@@ -10,9 +10,9 @@
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class MessageTestApiController : ServicesApiController
     {
-        private readonly IMessageBus<QueueSampleBus> busQueue;
+        private readonly IMessageBus<CustomQueueSampleBus> busQueue;
 
-        public MessageTestApiController(IMessageBus<QueueSampleBus> busQueue)
+        public MessageTestApiController(IMessageBus<CustomQueueSampleBus> busQueue)
         {
             this.busQueue = busQueue;
         }

@@ -1,6 +1,6 @@
 ﻿namespace SitecoreMessagingQueueSample.Messaging
 {
-    public sealed class QueueSampleBus
+    public sealed class CustomQueueSampleBus
     {
     }
 }

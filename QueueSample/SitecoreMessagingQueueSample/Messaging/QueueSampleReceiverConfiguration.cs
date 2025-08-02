@@ -9,8 +9,8 @@
     {
         public void Configure(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient<IMessageHandler<JObject>, QueueMessageHandler>();
-            serviceCollection.AddTransient<IMessageHandler<SampleMessageContract>, CustomSendMessageHandler>();
+            serviceCollection.AddTransient<IMessageHandler<SampleMessageContract>, QueueMessageHandler>();
+            serviceCollection.AddTransient<IMessageHandler<JObject>, CustomSendMessageHandler>();
         }
     }
 }

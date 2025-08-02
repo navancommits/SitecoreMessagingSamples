@@ -6,9 +6,9 @@
     using System;
     using System.Threading.Tasks;
 
-    public class QueueMessageHandler : IMessageHandler<JObject>, IMessageHandler
+    public class CustomSendMessageHandler : IMessageHandler<JObject>, IMessageHandler
     {
-        public QueueMessageHandler()
+        public CustomSendMessageHandler()
         {
         }
 
@@ -23,9 +23,9 @@
         }
     }
 
-    public class CustomSendMessageHandler : IMessageHandler<SampleMessageContract>, IMessageHandler
+    public class QueueMessageHandler : IMessageHandler<SampleMessageContract>, IMessageHandler
     {
-        public CustomSendMessageHandler()
+        public QueueMessageHandler()
         {
         }
 

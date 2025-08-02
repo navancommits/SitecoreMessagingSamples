@@ -13,7 +13,7 @@
         }
         public void Process(PipelineArgs args)
         {
-            this.serviceProvider.StartMessageBus<QueueSampleBus>();
+            this.serviceProvider.StartMessageBus<CustomQueueSampleBus>();
         }
     }
 }
