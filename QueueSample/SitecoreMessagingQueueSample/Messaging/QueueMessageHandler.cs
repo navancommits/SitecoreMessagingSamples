@@ -8,10 +8,8 @@
 
     public class QueueMessageHandler : IMessageHandler<JObject>, IMessageHandler
     {
-        //private readonly IMessageBus<QueueSampleBus> _bus;
         public QueueMessageHandler()
         {
-            //this._bus = bus;
         }
 
         public async Task Handle(JObject message, IMessageReceiveContext receiveContext, IMessageReplyContext replyContext)
@@ -27,10 +25,8 @@
 
     public class CustomSendMessageHandler : IMessageHandler<SampleMessageContract>, IMessageHandler
     {
-        //private readonly IMessageBus<QueueSampleBus> _bus;
         public CustomSendMessageHandler()
         {
-            //this._bus = bus;
         }
 
         public async Task Handle(SampleMessageContract message, IMessageReceiveContext receiveContext, IMessageReplyContext replyContext)
